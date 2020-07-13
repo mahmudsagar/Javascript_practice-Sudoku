@@ -1,6 +1,7 @@
 package sudoku.buuldLogic;
 
 import sudoku.computaonLogic.GameLogic;
+import sudoku.persistence.localStorageImpl;
 import sudoku.problemdomain.IStorage;
 import sudoku.problemdomain.SudokuGame;
 import sudoku.userinterface.IUserInterfaceContract;
@@ -12,7 +13,7 @@ public class SudokuBuildLogic {
 
     public static void build(IUserInterfaceContract.View userInterface) throws IOException{
         SudokuGame initialState;
-        IStorage storage = new LocalStorageImpl();
+        IStorage storage = new localStorageImpl();
 
         try{
             initialState = storage.getGameDAta();
