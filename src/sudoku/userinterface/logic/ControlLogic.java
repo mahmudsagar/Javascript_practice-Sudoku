@@ -1,5 +1,6 @@
 package sudoku.userinterface.logic;
 
+import sudoku.computaonLogic.GameLogic;
 import sudoku.constants.GameState;
 import sudoku.constants.Messages;
 import sudoku.problemdomain.IStorage;
@@ -26,7 +27,7 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
             int[][] newGridState = gameData.getCopyOfGridState();
 
             gameData = new SudokuGame(
-                    GameLogic.checkForComplete(newGridState),
+                    GameLogic.checkForCompletion(newGridState),
                     newGridState
             );
 
